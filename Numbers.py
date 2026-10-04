@@ -1,0 +1,625 @@
+{
+ "cells": [
+  {
+   "cell_type": "markdown",
+   "id": "41d7c523-a20d-4ca4-8fc2-55b8eb2d187f",
+   "metadata": {},
+   "source": [
+    "Python-interview-programs"
+   ]
+  },
+  {
+   "cell_type": "markdown",
+   "id": "684f9f7b-3d73-45c9-bf85-50286dc05e62",
+   "metadata": {},
+   "source": [
+    "Numbers"
+   ]
+  },
+  {
+   "cell_type": "markdown",
+   "id": "e30810fb-a433-43ae-a83b-c5e466a5a181",
+   "metadata": {},
+   "source": [
+    "1. Program to Find Odd or Even number"
+   ]
+  },
+  {
+   "cell_type": "code",
+   "execution_count": 10,
+   "id": "7a3fde04-409d-4290-9a76-1639453f6b1f",
+   "metadata": {},
+   "outputs": [
+    {
+     "name": "stdin",
+     "output_type": "stream",
+     "text": [
+      "Enter the number:  4\n"
+     ]
+    },
+    {
+     "name": "stdout",
+     "output_type": "stream",
+     "text": [
+      "The given number is even.\n"
+     ]
+    }
+   ],
+   "source": [
+    "x = int(input(\"Enter the number: \"))\n",
+    "\n",
+    "if x % 2 == 0:\n",
+    "    print(\"The given number is even.\")\n",
+    "else:\n",
+    "    print(\"The given number is odd.\")"
+   ]
+  },
+  {
+   "cell_type": "code",
+   "execution_count": 11,
+   "id": "d26b7f0f-a7e4-4b4f-abc9-d7c22a4e4cb8",
+   "metadata": {},
+   "outputs": [
+    {
+     "name": "stdin",
+     "output_type": "stream",
+     "text": [
+      "Enter the number:  -5\n"
+     ]
+    },
+    {
+     "name": "stdout",
+     "output_type": "stream",
+     "text": [
+      "The given number is odd.\n"
+     ]
+    }
+   ],
+   "source": [
+    "x = int(input(\"Enter the number: \"))\n",
+    "\n",
+    "if x % 2 == 0:\n",
+    "    print(\"The given number is even.\")\n",
+    "else:\n",
+    "    print(\"The given number is odd.\")"
+   ]
+  },
+  {
+   "cell_type": "code",
+   "execution_count": 12,
+   "id": "bd51d8b4-bb17-4db5-8418-e9f034984f14",
+   "metadata": {},
+   "outputs": [
+    {
+     "name": "stdin",
+     "output_type": "stream",
+     "text": [
+      "Enter the number:  String\n"
+     ]
+    },
+    {
+     "ename": "ValueError",
+     "evalue": "invalid literal for int() with base 10: 'String'",
+     "output_type": "error",
+     "traceback": [
+      "\u001b[31m---------------------------------------------------------------------------\u001b[39m",
+      "\u001b[31mValueError\u001b[39m                                Traceback (most recent call last)",
+      "\u001b[36mCell\u001b[39m\u001b[36m \u001b[39m\u001b[32mIn[12]\u001b[39m\u001b[32m, line 1\u001b[39m\n\u001b[32m----> \u001b[39m\u001b[32m1\u001b[39m x = \u001b[38;5;28;43mint\u001b[39;49m\u001b[43m(\u001b[49m\u001b[38;5;28;43minput\u001b[39;49m\u001b[43m(\u001b[49m\u001b[33;43m\"\u001b[39;49m\u001b[33;43mEnter the number: \u001b[39;49m\u001b[33;43m\"\u001b[39;49m\u001b[43m)\u001b[49m\u001b[43m)\u001b[49m\n\u001b[32m      3\u001b[39m \u001b[38;5;28;01mif\u001b[39;00m x % \u001b[32m2\u001b[39m == \u001b[32m0\u001b[39m:\n\u001b[32m      4\u001b[39m     \u001b[38;5;28mprint\u001b[39m(\u001b[33m\"\u001b[39m\u001b[33mThe given number is even.\u001b[39m\u001b[33m\"\u001b[39m)\n",
+      "\u001b[31mValueError\u001b[39m: invalid literal for int() with base 10: 'String'"
+     ]
+    }
+   ],
+   "source": [
+    "x = int(input(\"Enter the number: \"))\n",
+    "\n",
+    "if x % 2 == 0:\n",
+    "    print(\"The given number is even.\")\n",
+    "else:\n",
+    "    print(\"The given number is odd.\")"
+   ]
+  },
+  {
+   "cell_type": "markdown",
+   "id": "109146fc-a5fd-4d22-845e-54cb25288aeb",
+   "metadata": {},
+   "source": [
+    "2. Program to find Prime number"
+   ]
+  },
+  {
+   "cell_type": "code",
+   "execution_count": 13,
+   "id": "8785a39b-7167-4cef-8542-cb3a5e0e4303",
+   "metadata": {},
+   "outputs": [
+    {
+     "name": "stdin",
+     "output_type": "stream",
+     "text": [
+      "Enter the number:  5\n"
+     ]
+    },
+    {
+     "name": "stdout",
+     "output_type": "stream",
+     "text": [
+      "The given number is prime\n"
+     ]
+    }
+   ],
+   "source": [
+    "x = int(input(\"Enter the number: \"))\n",
+    "\n",
+    "if x <= 1:\n",
+    "    print(\"The given number is not prime\")\n",
+    "else:\n",
+    "    for i in range(2, x):\n",
+    "        if x % i == 0:\n",
+    "            print(\"The given number is not prime\")\n",
+    "            break\n",
+    "    else:\n",
+    "        print(\"The given number is prime\")"
+   ]
+  },
+  {
+   "cell_type": "code",
+   "execution_count": 14,
+   "id": "9a5473e0-9e15-4cea-8e46-7abc46a3b979",
+   "metadata": {},
+   "outputs": [
+    {
+     "name": "stdin",
+     "output_type": "stream",
+     "text": [
+      "Enter the number:  -1\n"
+     ]
+    },
+    {
+     "name": "stdout",
+     "output_type": "stream",
+     "text": [
+      "The given number is not prime\n"
+     ]
+    }
+   ],
+   "source": [
+    "x = int(input(\"Enter the number: \"))\n",
+    "\n",
+    "if x <= 1:\n",
+    "    print(\"The given number is not prime\")\n",
+    "else:\n",
+    "    for i in range(2, x):\n",
+    "        if x % i == 0:\n",
+    "            print(\"The given number is not prime\")\n",
+    "            break\n",
+    "    else:\n",
+    "        print(\"The given number is prime\")"
+   ]
+  },
+  {
+   "cell_type": "code",
+   "execution_count": 15,
+   "id": "5949bf30-3548-4617-9166-ad3a26446ff9",
+   "metadata": {},
+   "outputs": [
+    {
+     "name": "stdin",
+     "output_type": "stream",
+     "text": [
+      "Enter the number:  2\n"
+     ]
+    },
+    {
+     "name": "stdout",
+     "output_type": "stream",
+     "text": [
+      "The given number is prime\n"
+     ]
+    }
+   ],
+   "source": [
+    "x = int(input(\"Enter the number: \"))\n",
+    "\n",
+    "if x <= 1:\n",
+    "    print(\"The given number is not prime\")\n",
+    "else:\n",
+    "    for i in range(2, x):\n",
+    "        if x % i == 0:\n",
+    "            print(\"The given number is not prime\")\n",
+    "            break\n",
+    "    else:\n",
+    "        print(\"The given number is prime\")"
+   ]
+  },
+  {
+   "cell_type": "markdown",
+   "id": "b4e6db66-eab5-4824-9820-6512af4cacd7",
+   "metadata": {},
+   "source": [
+    "3. Program to find Fibonacci series upto a given number range"
+   ]
+  },
+  {
+   "cell_type": "code",
+   "execution_count": 16,
+   "id": "1d0fefe6-93b0-4e9f-bde2-d22de61975f5",
+   "metadata": {},
+   "outputs": [
+    {
+     "name": "stdin",
+     "output_type": "stream",
+     "text": [
+      "Enter the range:  10\n"
+     ]
+    },
+    {
+     "name": "stdout",
+     "output_type": "stream",
+     "text": [
+      "0\n",
+      "1\n",
+      "1\n",
+      "2\n",
+      "3\n",
+      "5\n",
+      "8\n"
+     ]
+    }
+   ],
+   "source": [
+    "x = int(input(\"Enter the range: \"))\n",
+    "\n",
+    "a = 0\n",
+    "b = 1\n",
+    "\n",
+    "while a <= x:\n",
+    "    print(a)\n",
+    "    c = a + b\n",
+    "    a = b\n",
+    "    b = c"
+   ]
+  },
+  {
+   "cell_type": "code",
+   "execution_count": 17,
+   "id": "b15c57e9-2d0c-43d0-ad5c-237e65e6d57f",
+   "metadata": {},
+   "outputs": [
+    {
+     "name": "stdin",
+     "output_type": "stream",
+     "text": [
+      "Enter the range:  5\n"
+     ]
+    },
+    {
+     "name": "stdout",
+     "output_type": "stream",
+     "text": [
+      "0\n",
+      "1\n",
+      "1\n",
+      "2\n",
+      "3\n",
+      "5\n"
+     ]
+    }
+   ],
+   "source": [
+    "x = int(input(\"Enter the range: \"))\n",
+    "\n",
+    "a = 0\n",
+    "b = 1\n",
+    "\n",
+    "while a <= x:\n",
+    "    print(a)\n",
+    "    c = a + b\n",
+    "    a = b\n",
+    "    b = c"
+   ]
+  },
+  {
+   "cell_type": "markdown",
+   "id": "3efa2bb8-fe23-43a7-a123-f826cce596a6",
+   "metadata": {},
+   "source": [
+    "4. To swap two numbers without using third variable"
+   ]
+  },
+  {
+   "cell_type": "code",
+   "execution_count": 18,
+   "id": "32779d26-7996-4a4a-a15e-1f470191efc3",
+   "metadata": {},
+   "outputs": [
+    {
+     "name": "stdout",
+     "output_type": "stream",
+     "text": [
+      "20 10\n"
+     ]
+    }
+   ],
+   "source": [
+    "x = 10 \n",
+    "y = 20\n",
+    "x,y = y,x\n",
+    "print(x,y)"
+   ]
+  },
+  {
+   "cell_type": "markdown",
+   "id": "5732f7f6-45f7-46f7-88fb-787b714b281c",
+   "metadata": {},
+   "source": [
+    "5. To find Factorial on given Number"
+   ]
+  },
+  {
+   "cell_type": "code",
+   "execution_count": 20,
+   "id": "6da58a93-b25b-4333-8343-d1eaec2ea8a5",
+   "metadata": {},
+   "outputs": [
+    {
+     "name": "stdin",
+     "output_type": "stream",
+     "text": [
+      "Enter the number:  4\n"
+     ]
+    },
+    {
+     "name": "stdout",
+     "output_type": "stream",
+     "text": [
+      "24\n"
+     ]
+    }
+   ],
+   "source": [
+    "n = int(input(\"Enter the number: \"))\n",
+    "\n",
+    "a = 1\n",
+    "\n",
+    "for i in range(1, n + 1):\n",
+    "    a = a * i\n",
+    "\n",
+    "print(a)"
+   ]
+  },
+  {
+   "cell_type": "markdown",
+   "id": "0474b31e-9938-4c38-a1d1-e64bc23a3cb9",
+   "metadata": {},
+   "source": [
+    "6. To Reverse Number"
+   ]
+  },
+  {
+   "cell_type": "code",
+   "execution_count": 21,
+   "id": "a02cfa6b-9f30-43e0-80df-684e018000d6",
+   "metadata": {},
+   "outputs": [
+    {
+     "name": "stdin",
+     "output_type": "stream",
+     "text": [
+      "Enter the number:  12\n"
+     ]
+    },
+    {
+     "name": "stdout",
+     "output_type": "stream",
+     "text": [
+      "21\n"
+     ]
+    }
+   ],
+   "source": [
+    "n = (input(\"Enter the number: \"))\n",
+    "\n",
+    "reverse = int(n[::-1])\n",
+    "\n",
+    "print(reverse)"
+   ]
+  },
+  {
+   "cell_type": "markdown",
+   "id": "9a897976-bdc3-478d-a2d0-2bed1cd13a0d",
+   "metadata": {},
+   "source": [
+    "7. To find Armstrong Number"
+   ]
+  },
+  {
+   "cell_type": "code",
+   "execution_count": 22,
+   "id": "d780983a-88d7-414e-984b-9d26f6c0251b",
+   "metadata": {},
+   "outputs": [
+    {
+     "name": "stdin",
+     "output_type": "stream",
+     "text": [
+      "Enter the number:  121\n"
+     ]
+    },
+    {
+     "name": "stdout",
+     "output_type": "stream",
+     "text": [
+      "The given number is not an Armstrong number\n"
+     ]
+    }
+   ],
+   "source": [
+    "n = int(input(\"Enter the number: \"))\n",
+    "\n",
+    "original = n\n",
+    "total = 0\n",
+    "\n",
+    "while n > 0:\n",
+    "    a = n % 10\n",
+    "    total = total + a**3\n",
+    "    n = n // 10\n",
+    "\n",
+    "if total == original:\n",
+    "    print(\"The given number is an Armstrong number\")\n",
+    "else:\n",
+    "    print(\"The given number is not an Armstrong number\")"
+   ]
+  },
+  {
+   "cell_type": "markdown",
+   "id": "9a12a0e1-ad34-475a-9ca5-12ce40f1a338",
+   "metadata": {},
+   "source": [
+    "8. To find number of digits in given number"
+   ]
+  },
+  {
+   "cell_type": "code",
+   "execution_count": 23,
+   "id": "bf7b985e-6b6c-467a-ae79-8f27bda4175e",
+   "metadata": {},
+   "outputs": [
+    {
+     "name": "stdin",
+     "output_type": "stream",
+     "text": [
+      "Enter the number:  1258\n"
+     ]
+    },
+    {
+     "name": "stdout",
+     "output_type": "stream",
+     "text": [
+      "Number of digits: 4\n"
+     ]
+    }
+   ],
+   "source": [
+    "n = int(input(\"Enter the number: \"))\n",
+    "\n",
+    "count = 0\n",
+    "\n",
+    "while n != 0:\n",
+    "    n = n // 10\n",
+    "    count = count + 1\n",
+    "\n",
+    "print(\"Number of digits:\", count)"
+   ]
+  },
+  {
+   "cell_type": "markdown",
+   "id": "6ce5422b-4d84-47da-aa53-9a192ceb02bd",
+   "metadata": {},
+   "source": [
+    "9. To find Palindrome number"
+   ]
+  },
+  {
+   "cell_type": "code",
+   "execution_count": 24,
+   "id": "b7d4b1bd-0fa6-4a05-a75d-6355daa07edc",
+   "metadata": {},
+   "outputs": [
+    {
+     "name": "stdin",
+     "output_type": "stream",
+     "text": [
+      "Enter the number:  1331\n"
+     ]
+    },
+    {
+     "name": "stdout",
+     "output_type": "stream",
+     "text": [
+      "Palindrome\n"
+     ]
+    }
+   ],
+   "source": [
+    "n = int(input(\"Enter the number: \"))\n",
+    "\n",
+    "original = n\n",
+    "reverse = int(str(n)[::-1])\n",
+    "\n",
+    "if original == reverse:\n",
+    "    print(\"Palindrome\")\n",
+    "else:\n",
+    "    print(\"Not Palindrome\")"
+   ]
+  },
+  {
+   "cell_type": "markdown",
+   "id": "b67ef24f-c4fe-4cfa-9757-1fedf9ab8c86",
+   "metadata": {},
+   "source": [
+    "10. To calculate the sum of digits of a number"
+   ]
+  },
+  {
+   "cell_type": "code",
+   "execution_count": 29,
+   "id": "e62db381-7243-4eb0-a3fa-aea3dd4726c8",
+   "metadata": {},
+   "outputs": [
+    {
+     "name": "stdin",
+     "output_type": "stream",
+     "text": [
+      "Enter the number:  248\n"
+     ]
+    },
+    {
+     "name": "stdout",
+     "output_type": "stream",
+     "text": [
+      "Sum of digits: 14\n"
+     ]
+    }
+   ],
+   "source": [
+    "a = input(\"Enter the number: \")\n",
+    "\n",
+    "sum_of_numbers = 0\n",
+    "\n",
+    "for i in a:\n",
+    "    sum_of_numbers = sum_of_numbers + int(i)\n",
+    "\n",
+    "print(\"Sum of digits:\", sum_of_numbers)"
+   ]
+  },
+  {
+   "cell_type": "code",
+   "execution_count": null,
+   "id": "54fd9f7a-19ec-4215-9b1d-14645d4a4cb9",
+   "metadata": {},
+   "outputs": [],
+   "source": []
+  }
+ ],
+ "metadata": {
+  "kernelspec": {
+   "display_name": "Python 3 (ipykernel)",
+   "language": "python",
+   "name": "python3"
+  },
+  "language_info": {
+   "codemirror_mode": {
+    "name": "ipython",
+    "version": 3
+   },
+   "file_extension": ".py",
+   "mimetype": "text/x-python",
+   "name": "python",
+   "nbconvert_exporter": "python",
+   "pygments_lexer": "ipython3",
+   "version": "3.13.9"
+  }
+ },
+ "nbformat": 4,
+ "nbformat_minor": 5
+}
